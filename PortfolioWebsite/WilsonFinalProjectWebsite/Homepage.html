@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Homepage for the H&H Sisterly Creations website.">
+  <meta name="keywords" content="H&H Sisterly Creations, handmade jewelry, michigan vendor, hand dyed clothing, home decor">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Homepage</title>
+  <style type="text/css">
+    
+   * {background-color: powderblue;
+      
+     }
+
+   nav{text-align:left;
+      }
+
+   nav ul{
+          display: flex;
+          list-style-type:none;
+          gap:20px;
+          font-size:20px;
+         }
+
+   nav li a:link {color:mediumvioletred}
+
+   nav li a:hover {background-color:white;
+                   color:plum;
+                   border-radius:5px;
+                  }
+
+   .current-page{background-color:#ffd700;
+                }
+
+
+   .grid-footer{height:50px;
+                text-align:left;
+                font-size:16px;
+                margin-top:20px;
+             
+               }
+
+   a{text-decoration:none}
+
+   a:hover{background-color:white;
+                   color:plum;
+                   border-radius:5px;
+                  }
+
+   a.bookmark{font-size:20px;
+              border:2px solid mediumvioletred;
+              border-radius:5px;
+              padding:5px;
+             }
+
+   .fa {font-size:50px;
+        display:inline;
+       }
+
+   .grid-container{
+          display:grid;
+	  grid-template-areas:
+                       "header header"
+                       "img text"
+                       "content content"
+                       "table table"
+                       "footer footer";
+           grid-template-columns: 2fr 2fr;
+          border:10px solid plum;
+           gap:5px;
+           text-align:center;
+           padding:10px;
+          }
+
+   .grid-img {
+          grid-area:img;
+          height:100%;
+          width:95%;
+         }
+
+   .container{z-index:0}
+
+   div{background-image:linear-gradient(to right, mediumvioletred, plum);
+                       z-index:0;
+                      }
+
+   div.gradient{background-image:linear-gradient(to right, plum, mediumvioletred);
+                      z-index: 1;
+                     }
+
+   .grid-header {grid-area:header;
+                 border-radius:1em;
+                 background-color:plum;
+                 width:100%;
+                 text-align:center;
+                 font-style:italic;
+                 color:white;
+                 text-shadow:1px 1px black;
+                }
+
+  .grid-text {
+              grid-area:text;
+              width:100%;
+              justify-content:center;
+              align-self:center;
+             }
+
+  .grid-content {
+                grid-area:content;
+                justify-content:center;
+                
+                }
+
+  .grid-table{
+             grid-area:table;
+             font-size:24px;
+             }
+
+  #vendor-table {
+                 border-width:5px;
+                 border-style:inset;
+                 border-color:plum mediumvioletred;
+                 margin-top:25px;
+                 margin-left:auto;
+                 margin-right:auto;
+                 border-collapse:collapse;
+                 width:70%;
+                }
+
+  th {font-style:italic;
+      border:2px solid black;
+      padding:10px;
+     }
+
+  th.dl {font-size:16px;
+         font-style:normal;
+         color:mediumvioletred;
+        }
+
+  td {border:2px solid;
+      padding:5px;
+     }
+
+  ol.first {text-align: left;
+      padding-left:100px;
+      font-size:20px;
+      list-style:upper-roman;
+     }
+
+  ol.second{list-style:lower-alpha}
+
+  ul.text {list-style:circle}
+
+  .ulimg {height:200px;
+         width:200px;
+         box-shadow: 0 4px 8px 0 black, 0 6px 20px 0 black;
+        }
+  .imgd {list-style:none;
+         
+        }
+
+  a.aimg.motion {animation:moveright 4s ease-in-out 1s infinite alternate;
+                }
+
+  @keyframes moveright{from{margin-left:0%}
+                           to{margin-left:25%}
+                          }
+
+
+  a.aimg:hover {background-color:transparent}
+
+
+  h2   {font-style:italic;
+        border-width: 3px;
+        border-style: none none dashed none;
+        border-color: mediumvioletred;
+        margin-left:100px;
+        margin-right:100px;
+       }
+  h3   {color: mediumvioletred;
+       font-size:20px;
+       font-style:italic
+      }
+
+ p   {font-size:20px}
+
+  .styled-hr  {width:100%;
+               height:5px;
+               border:none;
+               background-color:plum;
+               margin-bottom: 20px;
+              }
+
+@media only screen and (max-width:600px){
+
+   .grid-container {
+                    grid-template-columns:1fr;
+                    grid-template-areas:
+                       "header"
+                       "img"
+                       "text"
+                       "content"
+                       "table"
+                       "footer";
+
+                   }
+
+
+   .grid-header {
+                height:auto;
+                width:100%;
+                }
+   .grid-img {
+              height:auto;
+              width:100%;
+             }
+
+   .grid-text {height:auto;
+              }
+
+   .grid-content {width:100%}
+
+        }
+
+  </style>
+</head>
+  <body>
+    <header id="top-of-page">
+      <nav>
+        <ul>
+          <li><a href="Homepage.html" class="current-page">Homepage</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="Products.html">Products</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+    
+    <main class="grid-container">
+      <h1 class="grid-header" id="welcome">H&H Sisterly Creations</h1>
+      <div class="gradient">
+      <img src="assets/H&H-Logo.webp" class="grid-img" alt="The logo for H&H Sisterly Creations." usemap="#image-map"/>
+       
+      <!-- Tried to set the image to have two separate links depending on which area of the image you clicked on. Doesn't really work well with fully responsive webpages.  -->
+
+      <map name="image-map">
+        <area shape="rect" coords="0,0,1000,1000" href="AboutUs.html">
+      </map>
+      </div>
+      <article class="grid-text" >
+       <h2>Welcome to our Shop!</h2>
+       <p>Here at H&H Sisterly Creations we are dedicated to enhancing your outfits and home with our beautifully handmade pieces. Click on our logo to learn more about us! Click on the link below to see our
+          upcoming vendor events!</p>
+       <a href="#events" class="bookmark">Jump to Vendor Events</a><br>
+      </article>
+      
+      <article class="grid-content" id="popular">
+        <hr class="styled-hr">
+        <h2>Our Most Popular Creations</h2>
+        <ol class="first">
+         <li>Handmade Jewelry</li>
+           <ol class="second">
+             <li>Earrings</li>
+               <ul class ="text">
+                 <li>Lavender Haze Earrings*</li><br>
+                 <li class="imgd">
+                    <a href="Products.html" class="aimg motion">
+                      <img class="ulimg"src="assets/LavenderHazeEarrings.webp" alt="Image of Lavendar Haze Earrings."/>
+                    </a>
+                   
+                 </li><br>
+                 <li>Cherry Earrings*</li><br>
+                 <li class="imgd">
+                    <a href="Products.html" class="aimg motion">
+                      <img class="ulimg"src="assets/CherryEarrings.webp" alt="Image of Cherry Earrings."/></li><br>
+                    </a>
+               </ul>
+             <li>Necklaces</li>
+               <ul class="text">
+                 <li>Charm Necklace - Heart of the Outdoors*</li><br>
+                 <li class="imgd">
+                    <a href="Products.html" class="aimg motion">
+                      <img class="ulimg"src="assets/CharmNecklace.webp" alt="Image of Charm Necklace named Heart of the Outdoors."/></li><br>
+                    </a>
+               </ul>
+           </ol>
+          
+         <li>Hand Dyed Clothing</li>
+         <li>Home Decor</li>
+        </ol>
+        
+       <h3>*Click on an image to be taken to the product page.</h3><br>
+       <a href="#events" class="bookmark">Jump to Vendor Events</a>
+       <a href="#welcome" class="bookmark">Back to Welcome</a>
+      </article>
+      <article class="grid-table" id="events">
+         <hr class="styled-hr">
+         <table id="vendor-table">
+           <th colspan="3">Upcoming Vendor Events</th>
+           <tr>
+             <th rowspan="2">Dragon on the Lake</th>
+             <th class="dl">Dates</th>
+             <th class="dl">Location</th>
+           </tr>
+           <tr>
+             <td>Friday 7/11 - Sunday 7/13</td>
+             <td>Orion Township, MI</td>
+           </tr>
+           <tr>
+             <th rowspan="2">Hippie Fest</th>
+             <th class="dl">Dates</th>
+             <th class="dl">Location</th>
+           </tr>
+           <tr>
+             <td>Friday 8/7 - Sunday 8/10</td>
+             <td>Sandusky, OH</td>
+           </tr>
+           <tr>
+             <th rowspan="2">East Lansing Art Festival</th>
+             <th class="dl">Dates</th>
+             <th class="dl">Location</th>
+           </tr>
+           <tr>
+             <td>Friday 8/29 - Monday 9/1</td>
+             <td>East Lansing, MI</td>
+           </tr>
+         </table><br>
+        <a href="#popular" class="bookmark">Back to Popular Creations</a>
+        <a href="#welcome" class="bookmark">Back to Welcome</a>
+      </article>
+      <article class="grid-footer" >
+       <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
+       <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle" class="fa fa-instagram"></a>
+      <a href="#top-of-page">Back to Top</a>
+      </article>
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
+</html>

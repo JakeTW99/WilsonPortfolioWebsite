@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Product available on the H&H Sisterly Creations Website">
+  <meta name="keywords" content="H&H Sisterly Creations, vendor, products, purchase, shop, necklace, earrings">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Products</title>
+  <style type="text/css">
+    
+   * {background-color: powderblue;
+     }
+
+      nav{text-align:left;
+       
+      }
+
+   nav ul{
+          display: flex;
+          list-style-type:none;
+          gap:20px;
+          font-size:20px;
+         }
+
+   nav li a:link {color:mediumvioletred}
+
+   nav li a:hover {background-color:white;
+                   color:plum;
+                   border-radius:5px;
+                  }
+
+   .current-page{background-color:#ffd700;
+                }
+
+  a{text-decoration:none}
+
+.grid-footer{height:50px;
+                text-align:left;
+                font-size:16px;
+                margin-top:20px;
+               }
+
+   .grid-footer a{text-decoration:none}
+
+   .grid-footer a:hover{background-color:white;
+                   color:plum;
+                   border-radius:5px;
+                  }
+
+   .fa {font-size:50px;
+        display:inline;
+       }
+
+   main {
+           
+          }
+
+   .grid-container{
+          display:grid;
+	  grid-template-areas:
+                       "header"
+                       "content"
+                       "footer";
+           grid-template-columns: 1fr;
+          border:10px solid plum;
+           gap:5px;
+           text-align:center;
+           padding:10px;
+          }
+
+
+   .grid-header {grid-area:header;
+                 border-radius:1em;
+                 background-color:plum;
+                 width:100%;
+                 text-align:center;
+                 font-style:italic;
+                 color:white;
+                 text-shadow:1px 1px black;
+                }
+
+  .grid-content {
+                grid-area:content;
+                justify-content:center;
+                font-style:italic;
+                }
+
+  #product-table {
+
+            margin-left:auto;
+            margin-right:auto;
+            border-collapse:collapse;
+            width:100%;
+            font-size:24px;
+            table-layout:fixed;
+            
+                 }
+
+  #product-table th   {padding:10px}
+  #product-table td    {text-align:center;
+                        padding:10px;
+                       }
+
+
+  .img {width:200px;
+       height:200px;
+       box-shadow: 0 4px 8px 0 black, 0 6px 8px 0 black;
+      }
+
+  #product-table .table-header{padding:30px}
+  #product-table .asterisk{padding-top:30px;
+                           color:mediumvioletred;
+                          }
+
+@media only screen and (max-width:600px){
+   .grid-header {
+                height:auto;
+                width:100%;
+                }
+
+   .grid-content{
+                height:auto;
+                width:100%;
+                }
+
+   #product-table td{display:block}
+   #product-table th   {display:none}
+   #product-table .table-header{display:block}
+
+  </style>
+</head>
+  <body>
+    <header id="top-of-page">
+      <nav>
+        <ul>
+          <li><a href="Homepage.html">Homepage</a></li>
+          <li><a href="AboutUs.html">About Us</a></li>
+          <li><a href="Products.html" class="current-page">Products</a></li>
+          <li><a href="Contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      
+    </header>
+    <main class="grid-container">
+      <h1 class="grid-header">Our Products</h1>
+      <article class="grid-content">
+       <table id="product-table">
+         <tr>
+           <th class="table-header"colspan="2">All Products that are Available Online*</th>
+         </tr>
+         <tr>
+           <th>Lavender Haze Earrings</th>
+           <th>Cherry Earrings</th>
+         </tr>
+         <tr>
+           <td>
+              <figure>
+               <img class="img" src="assets/LavenderHazeEarrings.webp" alt="Image of Lavendar Haze Earrings."/>
+               <figcaption>$15</figcaption>
+              </figure>
+          </td>
+              
+           <td>
+              <figure>
+               <img class="img" src="assets/CherryEarrings.webp" alt="Image of Cherry Earrings."/>
+               <figcaption>$10</figcaption>
+              </figure>
+           </td>
+         </tr>
+         <tr>
+           <th colspan="2">Charm Necklace - Heart of the Outdoors</th>
+         </tr>
+         <tr>
+           <td colspan="2">
+             <figure>
+              <img class="img" src="assets/CharmNecklace.webp" alt="Image of Charm Necklace named Heart of the Outdoors."/>
+                           <figcaption>$20</figcaption>
+             </figure>
+           </td>
+         </tr>
+         <tr>
+           <td class="asterisk">*This page displays out best-selling products. We are always creating new accessories and items for our vendor events. If you have any questions about our upcoming vendor events or products, please visit the "Contact" page.</td>
+         </tr>
+       </table>
+      </article>
+    <article class="grid-footer">
+       <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
+       <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle" class="fa fa-instagram"></a>
+      <a href="#top-of-page">Back to Top</a>
+      </article>
+    </main>
+      
+    <footer>
+    </footer>
+  </body>
+</html>
