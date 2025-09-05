@@ -1,161 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Contact page for H&H Sisterly Creations website">
-  <meta name="keywords" content="H&H Sisterly Creations, michigan vendor, question, feedback, customer service, comment, email, contact us">
+  <meta name="keywords"
+    content="H&H Sisterly Creations, michigan vendor, question, feedback, customer service, comment, email, contact us">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Contact</title>
   <style type="text/css">
-    
-   * {background-color: powderblue;
-      
-     }
+    * {
+      background-color: powderblue;
 
-      nav{text-align:left;
+    }
+
+    nav {
+      text-align: left;
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+      font-size: 20px;
+    }
+
+    nav li a:link {
+      color: mediumvioletred
+    }
+
+    nav li a:hover {
+      background-color: white;
+      color: plum;
+      border-radius: 5px;
+    }
+
+    .current-page {
+      background-color: #ffd700;
+    }
+
+    a {
+      text-decoration: none
+    }
+
+
+    .grid-footer {
+      height: 50px;
+      text-align: left;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .grid-footer a {
+      text-decoration: none
+    }
+
+    .grid-footer a:hover {
+      background-color: white;
+      color: plum;
+      border-radius: 5px;
+
+    }
+
+    .fa {
+      font-size: 50px;
+      display: inline;
+    }
+
+    main {}
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "content content"
+        "footer footer";
+      grid-template-columns: 2fr 2fr;
+      border: 10px solid plum;
+      gap: 5px;
+      text-align: center;
+      padding: 10px;
+    }
+
+
+    .grid-header {
+      grid-area: header;
+      border-radius: 1em;
+      background-color: plum;
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+      color: white;
+      text-shadow: 1px 1px black;
+    }
+
+    .grid-content {
+      grid-area: content;
+      justify-content: center;
+      display: flex;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 75%;
+      display: block;
+      padding: 10px;
+      box-sizing: border-box;
+
+    }
+
+    form {
+      text-align: left
+    }
+
+    @media only screen and (max-width:600px) {
+
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "content"
+          "footer";
+
       }
 
-   nav ul{
-          display: flex;
-          list-style-type:none;
-          gap:20px;
-          font-size:20px;
-         }
 
-   nav li a:link {color:mediumvioletred}
+      .grid-header {
+        height: auto;
+        width: 100%;
+      }
 
-   nav li a:hover {background-color:white;
-                   color:plum;
-                   border-radius:5px;
-                  }
+      .grid-content {
+        height: auto;
+        width: 100%;
+      }
 
-   .current-page{background-color:#ffd700;
-                }
-
-   a{text-decoration:none}
+      nav {
+        text-align: center;
+      }
 
 
-   .grid-footer{height:50px;
-                text-align:left;
-                font-size:16px;
-                margin-top:20px;
-               }
-
-   .grid-footer a{text-decoration:none}
-
-   .grid-footer a:hover{background-color:white;
-                   color:plum;
-                   border-radius:5px;
-                   
-                  }
-
-   .fa {font-size:50px;
-        display:inline;
-       }
-
-   main {
-           
-          }
-
-   .grid-container{
-          display:grid;
-	  grid-template-areas:
-                       "header header"
-                       "content content"
-                       "footer footer";
-           grid-template-columns: 2fr 2fr;
-          border:10px solid plum;
-           gap:5px;
-           text-align:center;
-           padding:10px;
-          }
-
-
-   .grid-header {grid-area:header;
-                 border-radius:1em;
-                 background-color:plum;
-                 width:100%;
-                 text-align:center;
-                 font-style:italic;
-                 color:white;
-                 text-shadow:1px 1px black;
-                }
-
-  .grid-content {
-                grid-area:content;
-                justify-content:center;
-                display:flex;
-                }
-
-input[type="text"], input[type="email"], textarea{
-         width:75%;
-         display:block;
-         padding:10px;
-         box-sizing:border-box;
-
-        }
- 
-form{text-align:left}
-
-@media only screen and (max-width:600px){
-
-   .grid-container {
-                    grid-template-columns:1fr;
-                    grid-template-areas:
-                       "header"
-                       "content"
-                       "footer";
-
-                   }
-
-
-   .grid-header {
-                height:auto;
-                width:100%;
-                }
-   .grid-content {
-              height:auto;
-              width:100%;
-             }
-
-
+      nav ul {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
-  <body>
-    <header id="top-of-page">
-      <nav>
-        <ul>
-          <li><a href="Homepage.html">Homepage</a></li>
-          <li><a href="AboutUs.html">About Us</a></li>
-          <li><a href="Products.html">Products</a></li>
-          <li><a href="Contact.html" class="current-page">Contact</a></li>
-        </ul>
-      </nav>
-      
-    </header>
-    <main class="grid-container">
-      <h1 class="grid-header">Have Any Questions? Contact Us!</h1>
-      <article class="grid-content">
-        <form action="mailto:jaketw99@gmail.com" method="post" enctype="text/plain">
-          <label for="name">Your Name: </label>
-          <input type="text" id="name" name="name" placeholder="Your name.."/><br>
-          <label for="email">Your E-Mail: </label>
-          <input type="email" name="email" id="email" placeholder="Your.email@example.com" autofocus required/><br>
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" rows="10" cols="80" placeholder="Enter your question/comment here..."></textarea><br>
-          <input type="submit" value="Send Question/Message">
-          <input type="reset" value="Reset">
-        </form>
-      </article>
-      <article class="grid-footer">
-       <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
-       <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle" class="fa fa-instagram"></a>
+
+<body>
+  <header id="top-of-page">
+    <nav>
+      <ul>
+        <li><a href="Homepage.html">Homepage</a></li>
+        <li><a href="AboutUs.html">About Us</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Contact.html" class="current-page">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main class="grid-container">
+    <h1 class="grid-header">Have Any Questions? Contact Us!</h1>
+    <article class="grid-content">
+      <form action="mailto:jaketw99@gmail.com" method="post" enctype="text/plain">
+        <label for="name">Your Name: </label>
+        <input type="text" id="name" name="name" placeholder="Your name.." /><br>
+        <label for="email">Your E-Mail: </label>
+        <input type="email" name="email" id="email" placeholder="Your.email@example.com" autofocus required /><br>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="10" cols="80"
+          placeholder="Enter your question/comment here..."></textarea><br>
+        <input type="submit" value="Send Question/Message">
+        <input type="reset" value="Reset">
+      </form>
+    </article>
+    <article class="grid-footer">
+      <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle"
+        class="fa fa-instagram"></a>
       <a href="#top-of-page">Back to Top</a>
-      </article>
-    </main>
-      
-    <footer>
-    </footer>
-  </body>
+    </article>
+  </main>
+
+  <footer>
+  </footer>
+</body>
+
 </html>

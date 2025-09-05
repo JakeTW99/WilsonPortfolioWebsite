@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,181 +9,216 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>About Us</title>
   <style type="text/css">
-    
-   * {background-color: powderblue;
-      
-     }
+    * {
+      background-color: powderblue;
 
-      nav{text-align:left;
-       
+    }
+
+    nav {
+      text-align: left;
+
+    }
+
+    nav ul {
+      display: flex;
+      list-style-type: none;
+      gap: 20px;
+      font-size: 20px;
+    }
+
+    nav li a:link {
+      color: mediumvioletred
+    }
+
+    nav li a:hover {
+      background-color: white;
+      color: plum;
+      border-radius: 5px;
+    }
+
+    .current-page {
+      background-color: #ffd700;
+    }
+
+    a {
+      text-decoration: none
+    }
+
+    .grid-footer {
+      height: 50px;
+      text-align: left;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+
+    .grid-footer a {
+      text-decoration: none
+    }
+
+    .grid-footer a:hover {
+      background-color: white;
+      color: plum;
+      border-radius: 5px;
+    }
+
+    .fa {
+      font-size: 50px;
+      display: inline;
+    }
+
+    main {}
+
+    .grid-container {
+      display: grid;
+      grid-template-areas:
+        "header header"
+        "img text"
+        "content content"
+        "footer footer";
+      grid-template-columns: 2fr 2fr;
+      border: 10px solid plum;
+      gap: 5px;
+      text-align: center;
+      padding: 10px;
+
+    }
+
+    .grid-img {
+      grid-area: img;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+    }
+
+
+    .grid-header {
+      grid-area: header;
+      border-radius: 1em;
+      background-color: plum;
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+      color: white;
+      text-shadow: 1px 1px black;
+    }
+
+    .grid-text {
+      grid-area: text;
+      width: 100%;
+      justify-content: center;
+      align-self: center;
+    }
+
+    .grid-content {
+      grid-area: content;
+      justify-content: center;
+    }
+
+    .grid-img:hover {
+      transform: scaleX(-1)
+    }
+
+    video {
+      width: 100%;
+      height: 500px;
+    }
+
+    h2 {
+      font-style: italic;
+      border-width: 3px;
+      border-style: none none dashed none;
+      border-color: mediumvioletred;
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+
+    p {
+      font-size: 20px
+    }
+
+    @media only screen and (max-width:600px) {
+
+      .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "header"
+          "img"
+          "text"
+          "content"
+          "footer";
+
       }
 
-   nav ul{
-          display: flex;
-          list-style-type:none;
-          gap:20px;
-          font-size:20px;
-         }
 
-   nav li a:link {color:mediumvioletred}
+      .grid-header {
+        height: auto;
+        width: 100%;
+      }
 
-   nav li a:hover {background-color:white;
-                   color:plum;
-                   border-radius:5px;
-                  }
+      .grid-img {
+        height: auto;
+        width: 100%;
+      }
 
-   .current-page{background-color:#ffd700;
-                }
-
-   a{text-decoration:none}
-
-.grid-footer{height:50px;
-                text-align:left;
-                font-size:16px;
-               margin-top:20px;
-               }
-
-   .grid-footer a{text-decoration:none}
-
-   .grid-footer a:hover{background-color:white;
-                   color:plum;
-                   border-radius:5px;
-                  }
-
-   .fa {font-size:50px;
-        display:inline;
-       }
-
-   main {
-           
-          }
-
-   .grid-container{
-          display:grid;
-	  grid-template-areas:
-                       "header header"
-                       "img text"
-                       "content content"
-                       "footer footer";
-           grid-template-columns: 2fr 2fr;
-          border:10px solid plum;
-           gap:5px;
-           text-align:center;
-           padding:10px;
-           
-          }
-
-   .grid-img {
-          grid-area:img;
-          height:100%;
-          width:100%;
-          justify-content:center;
-         }
+      .grid-text {
+        height: auto;
+      }
 
 
-   .grid-header {grid-area:header;
-                 border-radius:1em;
-                 background-color:plum;
-                 width:100%;
-                 text-align:center;
-                 font-style:italic;
-                 color:white;
-                 text-shadow:1px 1px black;
-                }
-
-  .grid-text {
-              grid-area:text;
-              width:100%;
-              justify-content:center;
-              align-self:center;
-             }
-
-  .grid-content {
-                grid-area:content;
-                justify-content:center;
-                }
-
-  .grid-img:hover {transform: scaleX(-1)}
-
-  video {width:100%;
-         height:500px;
-        }
-
-h2   {font-style:italic;
-      border-width: 3px;
-        border-style: none none dashed none;
-        border-color: mediumvioletred;
-        margin-left:100px;
-        margin-right:100px;
-     }
-
- p   {font-size:20px}
- 
-@media only screen and (max-width:600px){
-
-   .grid-container {
-                    grid-template-columns:1fr;
-                    grid-template-areas:
-                       "header"
-                       "img"
-                       "text"
-                       "content"
-                       "footer";
-
-                   }
+      nav {
+        text-align: center;
+      }
 
 
-   .grid-header {
-                height:auto;
-                width:100%;
-                }
-   .grid-img {
-              height:auto;
-              width:100%;
-             }
-
-   .grid-text {height:auto;
-              }
-        }
-
+      nav ul {
+        justify-content: center;
+      }
+    }
   </style>
 </head>
-  <body>
-    <header id="top-of-page">
-      <nav>
-        <ul>
-          <li><a href="Homepage.html">Homepage</a></li>
-          <li><a href="AboutUs.html" class="current-page">About Us</a></li>
-          <li><a href="Products.html">Products</a></li>
-          <li><a href="Contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      
-    </header>
-    <main class="grid-container">
-      <h1 class="grid-header">More About Us</h1>
-      <img src="assets/AboutUs.webp" class="grid-img" alt="Picture of the H&H Sisterly Creations sister duo, Hannah and Hailey, featured at a vendor event."/>
-      <article class="grid-text">
-       <h2>What we are all about</h2>
-       <p>H&H Sisterly Creations is ran by the sister duo Hannah and Hailey. Our speciality is handmade jewelry, but we also enjoy making hand dyed clothing and 
-          home decor! You can find us at various vendor events throughout Michigan.</p>
-      </article>
-      <article class="grid-content">
-        <h2>Spot us at one of our vendor events!</h2>
-        <video controls>
-          <source src="assets/VendorTent.mp4" type="video/mp4"/>
-          <source src="assets/VendorTent.webm" type="video/webm"/>
-          <p>Your browser does not support the video tag that is included in the HTML file. Instead, here is a <a href="VendorTent.mp4">link to the video file</a>. There is no spoken dialogue in the video, so captions or subtitles are not necessary.</p>
-        </video>
-        
-      </article>
-      <article class="grid-footer">
-       <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
-       <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle" class="fa fa-instagram"></a>
+
+<body>
+  <header id="top-of-page">
+    <nav>
+      <ul>
+        <li><a href="Homepage.html">Homepage</a></li>
+        <li><a href="AboutUs.html" class="current-page">About Us</a></li>
+        <li><a href="Products.html">Products</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main class="grid-container">
+    <h1 class="grid-header">More About Us</h1>
+    <img src="assets/AboutUs.webp" class="grid-img"
+      alt="Picture of the H&H Sisterly Creations sister duo, Hannah and Hailey, featured at a vendor event." />
+    <article class="grid-text">
+      <h2>What we are all about</h2>
+      <p>H&H Sisterly Creations is ran by the sister duo Hannah and Hailey. Our speciality is handmade jewelry, but we
+        also enjoy making hand dyed clothing and
+        home decor! You can find us at various vendor events throughout Michigan.</p>
+    </article>
+    <article class="grid-content">
+      <h2>Spot us at one of our vendor events!</h2>
+      <video controls>
+        <source src="assets/VendorTent.mp4" type="video/mp4" />
+        <source src="assets/VendorTent.webm" type="video/webm" />
+        <p>Your browser does not support the video tag that is included in the HTML file. Instead, here is a <a
+            href="VendorTent.mp4">link to the video file</a>. There is no spoken dialogue in the video, so captions or
+          subtitles are not necessary.</p>
+      </video>
+
+    </article>
+    <article class="grid-footer">
+      <a href="https://www.facebook.com/h.h.sisterlycreations" class="fa fa-facebook"></a>
+      <a href="https://www.instagram.com/accounts/login/?next=https%3A%2F%2Fwww.instagram.com%2Fh.h.sisterly_creations%2F&is_from_rle"
+        class="fa fa-instagram"></a>
       <a href="#top-of-page">Back to Top</a>
-      </article>
-    </main>
-    <footer>
-    </footer>
-  </body>
+    </article>
+  </main>
+  <footer>
+  </footer>
+</body>
+
 </html>
