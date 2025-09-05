@@ -1,51 +1,124 @@
-body {background-color: midnightblue;
-   color:darkgrey;
-   text-align:center;
-   padding:10px;
+body {
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 20px;
    justify-content: center;
    align-items: center;
-  }
+   box-sizing: border-box;
+}
 
-div {grid-area:content;}
+div {
+   grid-area: content;
+   margin-bottom: 30px;
+}
 
 a {
-   color:white;
-  }
+   border-radius: 5px;
+   border: 2px solid darkgrey;
+   padding:5px;
+   color: white;
+}
 
-.headshot{
-          grid-area: img;
-          height:550px;
-          width:425px;
-          float: left;
-         }
+a:hover {
+   background-color: darkgrey;
+   color: black;
+   text-decoration: none;
+}
 
-@media only screen and (max-width:500px){
+figcaption {
+   font-style: italic;
+   font-size: 32px;
+   margin-top: 5px;
+}
+
+section {
+   border: 2.5px solid grey;
+   padding:20px;
+   min-height: 350px;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   gap:24px;
+}
+ .screenshot {
+      height: 400px;
+      max-width: 400px;
+      min-width: 180px;
+      margin: 20px;
+      object-fit: contain;
+ }
+
+.headshot {
+   grid-area: img;
+   height: 400px;
+   width: 350px;
+}
+
+.grid-header {
+   grid-area: header;
+   height: auto;
+   width: 100%;
+}
+
+.grid-container {
+   display: grid;
+   grid-template-areas:
+      "header"
+      "img"
+      "content"
+      "footer";
+   grid-template-columns: 1fr;
+   gap: 5px;
+   text-align: center;
+   padding: 10px;
+}
+
+@media only screen and (max-width:600px) {
 
    .grid-container {
-                    grid-template-columns:1fr;
-                    grid-template-areas:
-                       "header"
-                       "img"
-                       "text"
-                       "content"
-                       "table"
-                       "footer";
+      grid-template-columns: 1fr;
+      grid-template-areas:
+         "header"
+         "img"
+         "text"
+         "content"
+         "table"
+         "footer";
 
-                   }
+   }
 
 
    .grid-header {
-                height:auto;
-                width:100%;
-                }
+      height: auto;
+      width: 100%;
+   }
+
    .grid-img {
-              height:auto;
-              width:100%;
-             }
+      height: auto;
+      width: 100%;
+   }
 
-   .grid-text {height:auto;
-              }
+   .grid-text {
+      height: auto;
+   }
 
-   .grid-content {width:100%}
+   .grid-content {
+      width: 100%
+   }
 
-        }
+   section {
+      min-height: unset;
+      padding: 10px;
+      width: 100%;
+      flex-direction: column;
+   }
+
+   .screenshot {
+      height: auto;
+      width: 100%;
+      margin: 0px;
+   }
+   
+}
