@@ -8,6 +8,8 @@ body {
    box-sizing: border-box;
 }
 
+p{font-size: 24px;}
+
 div {
    grid-area: content;
    margin-bottom: 30px;
@@ -16,7 +18,7 @@ div {
 a {
    border-radius: 5px;
    border: 2px solid darkgrey;
-   padding:5px;
+   padding: 5px;
    color: white;
 }
 
@@ -34,32 +36,36 @@ figcaption {
 
 section {
    border: 2.5px solid grey;
-   padding:20px;
+   padding: 20px;
    min-height: 350px;
    display: flex;
    flex-direction: row;
    align-items: center;
-   justify-content: center;
-   gap:24px;
+   justify-content: flex-start;
+   gap: 24px;
 }
- .screenshot {
-      height: 400px;
-      max-width: 400px;
-      min-width: 180px;
-      margin: 20px;
-      object-fit: contain;
- }
+
+.screenshot {
+   height: auto;
+   width: auto;
+   max-width: 1000px;
+   margin: 20px;
+   object-fit: contain;
+}
 
 .headshot {
    grid-area: img;
-   height: 400px;
-   width: 350px;
+   height: auto;
+   width: 25%;
+   margin: 0 auto;
 }
 
 .grid-header {
    grid-area: header;
    height: auto;
    width: 100%;
+   align-items: center;
+   justify-content: center;
 }
 
 .grid-container {
@@ -75,7 +81,17 @@ section {
    padding: 10px;
 }
 
-@media only screen and (max-width:600px) {
+.grid-img {
+   grid-area: img;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   margin: 0 auto;
+}
+
+@media only screen and (max-width:1250px) {
 
    .grid-container {
       grid-template-columns: 1fr;
@@ -96,7 +112,11 @@ section {
    }
 
    .grid-img {
-      height: auto;
+      grid-area: img;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       width: 100%;
    }
 
@@ -114,12 +134,22 @@ section {
       width: 100%;
       flex-direction: column;
       border: none;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+   }
+
+   .headshot {
+      grid-area: img;
+      height: auto;
+      width: 50%;
+      margin: 0 auto;
    }
 
    .screenshot {
       height: auto;
-      width: 100%;
+      width: 75%;
       margin: 0px;
    }
-   
+
 }
